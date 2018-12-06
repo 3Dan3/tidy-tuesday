@@ -1,4 +1,4 @@
-# tidy tuesday
+# Tidy Tuesday
 
 
 ## _A weekly social data project (in R)_
