@@ -291,7 +291,7 @@ states_dat_long_merged %>%
             position = "dodge", color = "white") +
   scale_fill_manual(values = c("cadetblue", "gold", "firebrick")) +
   ylim(c(0, 6000)) +
-  theme_fivethirtyeight() +
+  theme_minimal() +
   labs(title = "Puerto Rico appears to be less newsworthy",
        subtitle = "daily mentions",
        caption = "source: @fivethirtyeight.com")
@@ -307,7 +307,7 @@ states_dat_long_merged %>%
   ggplot(aes(date, mentions, fill = topic)) +
   geom_area(show.legend = F, alpha = .5) +
   scale_fill_manual(values = c("cadetblue", "gold", "firebrick")) +
-  theme_fivethirtyeight() +
+  theme_minimal() +
   ylim(c(0, 5000)) +
   facet_wrap(~topic, nrow = 3) +
   labs(title = "Puerto Rico appears to be less newsworthy",
@@ -325,7 +325,7 @@ tv_media %>%
   gather("hurricane", "proportion of sentences", - date) %>%
   ggplot(aes(date, `proportion of sentences`, fill = hurricane)) +
   geom_area(position = "dodge", alpha = .5, color = "white") +
-  theme_fivethirtyeight() +
+  theme_minimal() +
   scale_fill_manual(values = c("olivedrab", "firebrick", "cyan4", "darkorange")) +
   labs(title = "TV",
        subtitle = "Proportion fo sentences",
@@ -340,7 +340,7 @@ tv_media %>%
   ggplot(aes(date, `proportion of sentences`, fill = hurricane)) +
   geom_area(position = "dodge", alpha = .6,
             show.legend = F, color = "white") +
-  theme_fivethirtyeight() +
+  theme_minimal() +
   scale_fill_manual(values = c("olivedrab", "firebrick", 
                                "cyan4", "darkorange")) +
   facet_wrap(~hurricane, nrow = 4) +
