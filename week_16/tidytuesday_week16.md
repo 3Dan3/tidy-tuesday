@@ -49,13 +49,13 @@ exercise_dat %>%
 ```
 
     ## # A tibble: 5 x 3
-    ##   state          category         value
-    ##   <fct>          <chr>            <dbl>
-    ## 1 Michigan       women_working    0.21 
-    ## 2 Connecticut    men_working      0.290
-    ## 3 North Carolina men_nonworking   0.19 
-    ## 4 North Carolina women_nonworking 0.17 
-    ## 5 New Mexico     women_nonworking 0.14
+    ##   state      category       value
+    ##   <fct>      <chr>          <dbl>
+    ## 1 New Mexico men_working    0.290
+    ## 2 Oregon     men_working    0.3  
+    ## 3 Washington women          0.26 
+    ## 4 Alabama    men_nonworking 0.23 
+    ## 5 New Mexico women_working  0.21
 
 EDA
 ---
