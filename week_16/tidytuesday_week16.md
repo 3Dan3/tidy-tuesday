@@ -49,13 +49,13 @@ exercise_dat %>%
 ```
 
     ## # A tibble: 5 x 3
-    ##   state          category       value
-    ##   <fct>          <chr>          <dbl>
-    ## 1 Georgia        men_nonworking  0.21
-    ## 2 South Carolina adults          0.14
-    ## 3 Colorado       women_working   0.33
-    ## 4 Georgia        men             0.27
-    ## 5 Mississippi    women           0.09
+    ##   state         category         value
+    ##   <fct>         <chr>            <dbl>
+    ## 1 Massachusetts women_nonworking 0.18 
+    ## 2 Arizona       men              0.290
+    ## 3 Florida       adults           0.21 
+    ## 4 South Dakota  men_nonworking   0.28 
+    ## 5 West Virginia men              0.19
 
 EDA
 ---
@@ -123,6 +123,7 @@ exercise_dat %>%
   geom_dumbbell(aes(x = women, xend = men), color = "darkgrey", 
                 colour_x = "darkorange", colour_xend = "cadetblue4",
                 size_x = 1.3, size_xend = 1.3, show.legend = FALSE)  +
+  expand_limits(x = 0) +
   scale_x_continuous(labels = percent_format(), breaks = c(seq(0, 0.4, 0.05))) +
   labs(title = "Exercise Levels for US Adults",
        subtitle = "Percentage meeting recommended federal guidelines for \nboth aerobic and muscle-strengthening activities",
@@ -172,6 +173,7 @@ exercise_dat %>%
   geom_dumbbell(aes(x = women_working, xend = men_working), color = "darkgrey", 
                 colour_x = "darkorange", colour_xend = "cadetblue4",
                 size_x = 1.3, size_xend = 1.3, show.legend = FALSE) +
+  expand_limits(x = 0) +
   scale_x_continuous(labels = percent_format(), breaks = c(seq(0, 0.4, 0.05))) +
   labs(title = "Exercise Levels for US Adults",
        subtitle = "% meeting recommended federal guidelines for both aerobic \nand muscle-strengthening activities. Working population",
@@ -222,6 +224,7 @@ exercise_dat %>%
   geom_dumbbell(aes(x = women_nonworking, xend = men_nonworking), color = "darkgrey", 
                 colour_x = "darkorange", colour_xend = "cadetblue4",
                 size_x = 1.3, size_xend = 1.3, show.legend = FALSE) +
+  expand_limits(x = 0) +
   scale_x_continuous(labels = percent_format(), breaks = c(seq(0, 0.45, 0.05))) +
   labs(title = "Exercise Levels for US Adults",
        subtitle = "% meeting recommended federal guidelines for both aerobic \nand muscle-strengthening activities. Non-working population",
@@ -247,3 +250,7 @@ exercise_dat %>%
 ```
 
 <img src="tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+
+``` r
+ggsave("non-working.pdf", height = 6.5, width = 6.2)
+```
