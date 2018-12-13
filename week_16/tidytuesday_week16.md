@@ -49,13 +49,13 @@ exercise_dat %>%
 ```
 
     ## # A tibble: 5 x 3
-    ##   state      category       value
-    ##   <fct>      <chr>          <dbl>
-    ## 1 New Mexico men_working    0.290
-    ## 2 Oregon     men_working    0.3  
-    ## 3 Washington women          0.26 
-    ## 4 Alabama    men_nonworking 0.23 
-    ## 5 New Mexico women_working  0.21
+    ##   state          category       value
+    ##   <fct>          <chr>          <dbl>
+    ## 1 Georgia        men_nonworking  0.21
+    ## 2 South Carolina adults          0.14
+    ## 3 Colorado       women_working   0.33
+    ## 4 Georgia        men             0.27
+    ## 5 Mississippi    women           0.09
 
 EDA
 ---
@@ -98,7 +98,7 @@ exercise_dat %>%
   coord_flip()
 ```
 
-![](tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-3-1.png)
+<img src="tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 ### exercise levels by gender
 
@@ -147,7 +147,7 @@ exercise_dat %>%
         axis.text.x = element_text(size = 7.5)) 
 ```
 
-![](tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-4-1.png)
+<img src="tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 ### exericise levels for working men and women
 
@@ -196,7 +196,7 @@ exercise_dat %>%
         axis.text.x = element_text(size = 7.5))
 ```
 
-![](tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-5-1.png)
+<img src="tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 ### exercise levels for non-working men and non-working women
 
@@ -246,4 +246,4 @@ exercise_dat %>%
         axis.text.x = element_text(size = 7.5))
 ```
 
-![](tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-6-1.png)
+<img src="tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
