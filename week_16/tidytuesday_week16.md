@@ -49,13 +49,13 @@ exercise_dat %>%
 ```
 
     ## # A tibble: 5 x 3
-    ##   state         category         value
-    ##   <fct>         <chr>            <dbl>
-    ## 1 Massachusetts women_nonworking 0.18 
-    ## 2 Arizona       men              0.290
-    ## 3 Florida       adults           0.21 
-    ## 4 South Dakota  men_nonworking   0.28 
-    ## 5 West Virginia men              0.19
+    ##   state    category      value
+    ##   <fct>    <chr>         <dbl>
+    ## 1 Montana  women          0.2 
+    ## 2 Georgia  women_working  0.15
+    ## 3 Georgia  men            0.27
+    ## 4 Virginia women_working  0.2 
+    ## 5 Vermont  men            0.35
 
 EDA
 ---
@@ -250,7 +250,3 @@ exercise_dat %>%
 ```
 
 <img src="tidytuesday_week16_files/figure-markdown_github/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
-
-``` r
-ggsave("non-working.pdf", height = 6.5, width = 6.2)
-```
